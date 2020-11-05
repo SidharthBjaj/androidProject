@@ -3,23 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
-
+    app:startDestination="@id/nav_welcome">
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.androidproject.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
-
+        android:id="@+id/nav_welcome"
+        android:name="com.example.androidproject.nav_welcome"
+        android:label="fragment_nav_welcome"
+        tools:layout="@layout/fragment_nav_welcome" />
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.androidproject.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
+        android:id="@+id/nav_contact"
+        android:name="com.example.androidproject.nav_contact"
+        android:label="fragment_nav_contact"
+        tools:layout="@layout/fragment_nav_contact" />
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.androidproject.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_hook"
+        android:name="com.example.androidproject.nav_hook"
+        android:label="fragment_nav_hook"
+        tools:layout="@layout/fragment_nav_hook" />
+    <fragment
+        android:id="@+id/nav_tips"
+        android:name="com.example.androidproject.nav_tips"
+        android:label="fragment_nav_tips"
+        tools:layout="@layout/fragment_nav_tips" />
+    <fragment
+        android:id="@+id/nav_process"
+        android:name="com.example.androidproject.nav_process"
+        android:label="fragment_nav_process"
+        tools:layout="@layout/fragment_nav_process" />
 </navigation>
