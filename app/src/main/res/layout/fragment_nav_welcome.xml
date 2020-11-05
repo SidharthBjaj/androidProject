@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/bannerWelcome"
-        android:layout_width="414dp"
-        android:layout_height="178dp"
+        android:layout_width="415dp"
+        android:layout_height="175dp"
         android:src="@drawable/ic_launcher_background"
         tools:layout_editor_absoluteX="-2dp"
         tools:layout_editor_absoluteY="20dp" />
