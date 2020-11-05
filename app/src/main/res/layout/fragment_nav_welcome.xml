@@ -1,14 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#053357"
     tools:context=".nav_welcome">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/bannerWelcome"
+        android:layout_width="414dp"
+        android:layout_height="178dp"
+        android:src="@drawable/ic_launcher_background"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="20dp" />
+
+    <ImageView
+        android:id="@+id/service3"
+        android:layout_width="102dp"
+        android:layout_height="204dp"
+        android:layout_marginTop="24dp"
+        android:background="#375480"
+        android:src="@drawable/ic_baseline_mobile_friendly_24"
+        app:layout_constraintEnd_toStartOf="@+id/service4"
+        app:layout_constraintStart_toEndOf="@+id/service2"
+        app:layout_constraintTop_toBottomOf="@+id/bannerWelcome" />
+
+    <ImageView
+        android:id="@+id/service2"
+        android:layout_width="102dp"
+        android:layout_height="204dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_baseline_mobile_friendly_24"
+        app:layout_constraintEnd_toStartOf="@+id/service3"
+        app:layout_constraintStart_toEndOf="@+id/service1"
+        app:layout_constraintTop_toBottomOf="@+id/bannerWelcome" />
+
+    <ImageView
+        android:id="@+id/service4"
+        android:layout_width="105dp"
+        android:layout_height="203dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_baseline_mobile_friendly_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/service3"
+        app:layout_constraintTop_toBottomOf="@+id/bannerWelcome" />
+
+    <ImageView
+        android:id="@+id/service1"
+        android:layout_width="101dp"
+        android:layout_height="205dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="24dp"
+        android:background="#375480"
+        android:src="@drawable/ic_baseline_mobile_friendly_24"
+        app:layout_constraintEnd_toStartOf="@+id/service2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bannerWelcome" />
+
+    <TextView
+        android:id="@+id/reviewsTest"
+        android:layout_width="407dp"
+        android:layout_height="147dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="2dp"
+        android:background="#375480"
+        android:padding="10sp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/service1" />
+
+    <Button
+        android:id="@+id/emailButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="2dp"
+        android:text="Ask Something"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reviewsTest" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
