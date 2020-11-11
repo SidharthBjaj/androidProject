@@ -1,5 +1,7 @@
 package com.example.androidproject;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +62,79 @@ public class nav_contact extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_nav_contact, container, false);
+        View view = inflater.inflate(R.layout.fragment_nav_contact, container, false);
+
+        Button callButton = view.findViewById(R.id.callButton);
+        callButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri number = Uri.parse("tel: 5199816764");
+                Intent intent = new Intent(Intent.ACTION_DIAL,number);
+                startActivity(intent);
+            }
+        });
+
+        Button emailButton = view.findViewById(R.id.emailButton);
+        emailButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String[]emailAddress={"sb124@myscc.ca"};
+                String[]ccEmailAddress={"techSupport@tgenics.ca"};
+
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setData(Uri.parse("mailto:"));
+                intent.putExtra(Intent.EXTRA_EMAIL,emailAddress);
+                intent.putExtra(Intent.EXTRA_CC,ccEmailAddress);
+                intent.putExtra(Intent.EXTRA_TEXT, "Some of the problems I am facing with my device are :- ");
+                startActivity(intent);
+            }
+        });
+
+        Button textButton = view.findViewById(R.id.msgButton);
+        textButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("smsto:"));
+                intent.putExtra("sms body: ", "Some of my concerns regarding the device are :- ");
+                startActivity(intent);
+            }
+        });
+
+        Button locationButton = view.findViewById(R.id.locButton);
+        locationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri location = Uri.parse("geo:0,0?q=42.2484642,-83.0225078(St Clair College)");
+                Intent intent = new Intent(Intent.ACTION_VIEW,location);
+                startActivity(intent);
+            }
+        });
+
+        Button websiteButton = view.findViewById(R.id.websiteButton);
+        websiteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                {
+                    Uri uriUrl = Uri.parse("https://www.stclaircollege.ca/");
+                    Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+                    startActivity(launchBrowser);
+                }
+            }
+        });
+
+        Button facebookButton = view.findViewById(R.id.faceButton);
+        websiteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                {
+                    Uri uriUrl = Uri.parse("https://www.facebook.com/");
+                    Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+                    startActivity(launchBrowser);
+                }
+            }
+        });
+
+        return view;
     }
 }
