@@ -75,7 +75,7 @@
         app:layout_constraintTop_toBottomOf="@+id/service1" />
 
     <Button
-        android:id="@+id/emailButton"
+        android:id="@+id/askButton2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"

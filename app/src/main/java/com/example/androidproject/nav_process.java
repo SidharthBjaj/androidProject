@@ -2,7 +2,11 @@ package com.example.androidproject;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -59,6 +63,41 @@ public class nav_process extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_nav_process, container, false);
+        View view = inflater.inflate(R.layout.fragment_nav_process, container, false);
+        CustomViewPagerAdapter adapter = new CustomViewPagerAdapter(getChildFragmentManager());
+        ViewPager viewPager = view.findViewById(R.id.accessContent);
+        viewPager.setAdapter(adapter);
+        return view;
     }
-}
+
+    public class  CustomViewPagerAdapter extends FragmentPagerAdapter {
+
+
+        public CustomViewPagerAdapter(@NonNull FragmentManager fm) {
+            super(fm);
+        }
+
+        int resId = 0;
+        @NonNull
+        @Override
+        public ViewPagerFragment getItem(int position) {
+            switch (position) {
+                case 0:
+                    return ViewPagerFragment.newInstance("first","first desc","timeline 1",R.drawable.ic_baseline_contact_phone_24);
+                case 1:
+                    return ViewPagerFragment.newInstance("second","second desc","timeline 2",R.drawable.ic_baseline_contactless_24);
+                case 2:
+                    return ViewPagerFragment.newInstance("third","third desc","timeline 3",R.drawable.ic_baseline_mobile_friendly_24);
+                case 3:
+                    return ViewPagerFragment.newInstance("forth","forth desc","timeline 4",R.drawable.ic_baseline_sync_problem_24);
+                case 4:
+                    return ViewPagerFragment.newInstance("fifth","fifth desc","timeline 5",R.drawable.ic_baseline_open_in_browser_24);
+                default:
+                    return ViewPagerFragment.newInstance("default","none","none",R.drawable.side_nav_bar);
+            }
+        }
+        @Override
+    public int getCount(){
+        return 5;
+        }
+    }}

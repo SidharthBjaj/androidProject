@@ -74,7 +74,7 @@ public class nav_contact extends Fragment {
             }
         });
 
-        Button emailButton = view.findViewById(R.id.emailButton);
+        Button emailButton = view.findViewById(R.id.askButton2);
         emailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
