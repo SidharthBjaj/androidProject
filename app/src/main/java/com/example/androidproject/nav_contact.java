@@ -124,7 +124,7 @@ public class nav_contact extends Fragment {
         });
 
         Button facebookButton = view.findViewById(R.id.faceButton);
-        websiteButton.setOnClickListener(new View.OnClickListener() {
+        facebookButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 {
