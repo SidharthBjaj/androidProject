@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Font Size" />
+    <Preference
+        android:key="text"
+        android:title="Text Size" />
 
+    <PreferenceCategory
+        android:title="Font Style" />
+    <Preference
+        android:key="text"
+        android:title="Text Style" />
 
+    <PreferenceCategory
+        android:title="Number of tips" />
+    <Preference
+        android:key="Integer"
+        android:title="Select No. of Tips" />
 </PreferenceScreen>
