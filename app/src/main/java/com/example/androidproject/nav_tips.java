@@ -1,12 +1,22 @@
 package com.example.androidproject;
 
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,6 +29,7 @@ public class nav_tips extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    TextView description;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -59,6 +70,29 @@ public class nav_tips extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_nav_tips, container, false);
+        View view = inflater.inflate(R.layout.fragment_nav_tips, container, false);
+        final ListView listView = view.findViewById(R.id.DataTypeList);
+        description = view.findViewById(R.id.item_description);
+
+        ArrayList<ListViewItem> dataTypeItemArrayList = new ArrayList<>();
+        dataTypeItemArrayList.add(new ListViewItem("First Tip","This is first Tip"));
+        dataTypeItemArrayList.add(new ListViewItem("Second Tip","This is second Tip"));
+        dataTypeItemArrayList.add(new ListViewItem("third Tip","This is third Tip"));
+        dataTypeItemArrayList.add(new ListViewItem("Forth tip","This is forth Tip"));
+        dataTypeItemArrayList.add(new ListViewItem("Fifth tip","This is fifth Tip"));
+        dataTypeItemArrayList.add(new ListViewItem("Sixth tip","This is sixth Tip"));
+
+        ArrayAdapter arrayAdapter = new ArrayAdapter(getContext(),android.R.layout.simple_list_item_1,dataTypeItemArrayList);
+        listView.setAdapter(arrayAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                description.setText(((ListViewItem)listView.getItemAtPosition(position)).getDescription());
+            }
+        });
+        return view;
     }
+
+
 }
