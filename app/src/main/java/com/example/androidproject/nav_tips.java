@@ -1,12 +1,14 @@
 package com.example.androidproject;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +31,7 @@ public class nav_tips extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    SharedPreferences sharedPreferences;
     TextView description;
 
     // TODO: Rename and change types of parameters
@@ -71,6 +74,8 @@ public class nav_tips extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_nav_tips, container, false);
+
+
         final ListView listView = view.findViewById(R.id.DataTypeList);
         description = view.findViewById(R.id.item_description);
 
@@ -91,6 +96,17 @@ public class nav_tips extends Fragment {
                 description.setText(((ListViewItem)listView.getItemAtPosition(position)).getDescription());
             }
         });
+
+
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+
+//        if (sharedPreferences.getBoolean("size", Boolean.parseBoolean("22sp"))) {
+//            description.setTextSize(22);
+//        }
+//        if (sharedPreferences.getBoolean("size", Boolean.parseBoolean("20sp"))) {
+//            description.setTextSize(Float.parseFloat("28sp"));
+//            dataTypeItemArrayList.toString().toUpperCase();
+//        }
         return view;
     }
 
