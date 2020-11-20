@@ -4,9 +4,13 @@ public class ListViewItem {
     private String name;
     private String Description;
 
+
+
+
     public ListViewItem(String name, String description) {
         this.name = name;
         Description = description;
+
     }
 
     public String getName() {

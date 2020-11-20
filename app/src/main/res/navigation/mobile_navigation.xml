@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/nav_welcome"
         android:name="com.example.androidproject.nav_welcome"
-        android:label="fragment_nav_welcome"
+        android:label="WELCOME"
         tools:layout="@layout/fragment_nav_welcome" />
     <fragment
         android:id="@+id/nav_contact"
@@ -17,16 +17,21 @@
     <fragment
         android:id="@+id/nav_hook"
         android:name="com.example.androidproject.nav_hook"
-        android:label="fragment_nav_hook"
+        android:label="CALLBACK REQUEST"
         tools:layout="@layout/fragment_nav_hook" />
     <fragment
         android:id="@+id/nav_tips"
         android:name="com.example.androidproject.nav_tips"
-        android:label="fragment_nav_tips"
+        android:label="TIPS"
         tools:layout="@layout/fragment_nav_tips" />
     <fragment
         android:id="@+id/nav_process"
         android:name="com.example.androidproject.nav_process"
-        android:label="fragment_nav_process"
+        android:label="PROCESS"
         tools:layout="@layout/fragment_nav_process" />
+    <fragment
+        android:id="@+id/nav_credits"
+        android:name="com.example.androidproject.creditsFragment"
+        android:label="CREDITS"
+        tools:layout="@layout/fragment_credits" />
 </navigation>
