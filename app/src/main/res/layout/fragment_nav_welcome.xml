@@ -12,9 +12,13 @@
         android:id="@+id/bannerWelcome"
         android:layout_width="415dp"
         android:layout_height="175dp"
-        android:src="@drawable/ic_launcher_background"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="20dp" />
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:srcCompat="@drawable/banner"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/service3"
@@ -22,30 +26,30 @@
         android:layout_height="204dp"
         android:layout_marginTop="24dp"
         android:background="#375480"
-        android:src="@drawable/ic_baseline_mobile_friendly_24"
         app:layout_constraintEnd_toStartOf="@+id/service4"
         app:layout_constraintStart_toEndOf="@+id/service2"
-        app:layout_constraintTop_toBottomOf="@+id/bannerWelcome" />
+        app:layout_constraintTop_toBottomOf="@+id/bannerWelcome"
+        app:srcCompat="@drawable/first" />
 
     <ImageView
         android:id="@+id/service2"
         android:layout_width="102dp"
         android:layout_height="204dp"
         android:layout_marginTop="24dp"
-        android:src="@drawable/ic_baseline_mobile_friendly_24"
         app:layout_constraintEnd_toStartOf="@+id/service3"
         app:layout_constraintStart_toEndOf="@+id/service1"
-        app:layout_constraintTop_toBottomOf="@+id/bannerWelcome" />
+        app:layout_constraintTop_toBottomOf="@+id/bannerWelcome"
+        app:srcCompat="@drawable/second" />
 
     <ImageView
         android:id="@+id/service4"
         android:layout_width="105dp"
         android:layout_height="203dp"
         android:layout_marginTop="24dp"
-        android:src="@drawable/ic_baseline_mobile_friendly_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/service3"
-        app:layout_constraintTop_toBottomOf="@+id/bannerWelcome" />
+        app:layout_constraintTop_toBottomOf="@+id/bannerWelcome"
+        app:srcCompat="@drawable/third" />
 
     <ImageView
         android:id="@+id/service1"
@@ -54,10 +58,11 @@
         android:layout_marginStart="1dp"
         android:layout_marginTop="24dp"
         android:background="#375480"
-        android:src="@drawable/ic_baseline_mobile_friendly_24"
+
         app:layout_constraintEnd_toStartOf="@+id/service2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bannerWelcome" />
+        app:layout_constraintTop_toBottomOf="@+id/bannerWelcome"
+        app:srcCompat="@drawable/forth" />
 
     <TextView
         android:id="@+id/reviewsTest"

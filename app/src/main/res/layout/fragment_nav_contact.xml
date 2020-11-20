@@ -12,9 +12,11 @@
         android:id="@+id/bannerCont."
         android:layout_width="415dp"
         android:layout_height="175dp"
-        android:src="@drawable/ic_launcher_background"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="2dp" />
+        android:layout_marginTop="2dp"
+        android:src="@drawable/banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/msgImg"

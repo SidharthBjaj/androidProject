@@ -79,13 +79,25 @@ public class nav_tips extends Fragment {
         final ListView listView = view.findViewById(R.id.DataTypeList);
         description = view.findViewById(R.id.item_description);
 
+
         ArrayList<ListViewItem> dataTypeItemArrayList = new ArrayList<>();
-        dataTypeItemArrayList.add(new ListViewItem("First Tip","This is first Tip"));
-        dataTypeItemArrayList.add(new ListViewItem("Second Tip","This is second Tip"));
-        dataTypeItemArrayList.add(new ListViewItem("third Tip","This is third Tip"));
-        dataTypeItemArrayList.add(new ListViewItem("Forth tip","This is forth Tip"));
-        dataTypeItemArrayList.add(new ListViewItem("Fifth tip","This is fifth Tip"));
-        dataTypeItemArrayList.add(new ListViewItem("Sixth tip","This is sixth Tip"));
+        dataTypeItemArrayList.add(new ListViewItem("UNINSTALL OLD APPLICATION","The best thing to do in order to keep your phone healthy is to go through\n" +
+                "        your applications and delete those that you no longer use."));
+        dataTypeItemArrayList.add(new ListViewItem("KEEP YOUR SOFTWARE UPDATED","Regardless of whether you run iOS or Android, it’s vitally important for your phone’s health\n" +
+                "        that you keep the software up-to-date.\n" +
+                "        These usually have bug fixes and updates which fix issues on the device"));
+
+        dataTypeItemArrayList.add(new ListViewItem("AVOID OVER CHARGING","Most modern phones aren’t really supposed to be charged to the max, nor are they meant to run out of battery completely.\n" +
+                "        This is due to how the batteries are designed"));
+
+        dataTypeItemArrayList.add(new ListViewItem("INSURE YOU DEVICE","This may seem obvious, but a fairly easy way to make sure that your mobile phone remains in good\n" +
+                "        shape is to invest in comprehensive phone insurance."));
+
+        dataTypeItemArrayList.add(new ListViewItem("AVOID USING IN EXTREME TEMPS","The health of your smartphone is very dependent on how well the battery operates. A sure-fire way of putting the battery under undue strain is to expose your smartphone to\n" +
+                "        extreme temperatures – both hot and cold."));
+
+        dataTypeItemArrayList.add(new ListViewItem("LOW POWER MODE","Most, if not all, modern smartphones have some form of low-power mode, which reduced functionality in order\n" +
+                "        to preserve battery life and power. try to utilize this feature as much as possible"));
 
         ArrayAdapter arrayAdapter = new ArrayAdapter(getContext(),android.R.layout.simple_list_item_1,dataTypeItemArrayList);
         listView.setAdapter(arrayAdapter);

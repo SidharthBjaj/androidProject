@@ -28,7 +28,35 @@
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
 
 
+    <string name="tipsH">HEALTHY DEVICE</string>
 
+    <string name="tipsH1">UNINSTALL OLD APPLICATION</string>
+    <string name="tip1">The best thing to do in order to keep your phone healthy is to go through
+        your applications and delete those that you no longer use.</string>
+
+    <string name="tipsH2">KEEP YOUR SOFTWARE UPDATED</string>
+    <string name="tip2">Regardless of whether you run iOS or Android, it’s vitally important for your phone’s health
+        that you keep the software up-to-date.
+        These usually have bug fixes and updates which fix issues on the device</string>
+
+
+    <string name="tipsH3">AVOID OVER CHARGING</string>
+    <string name="tip3">Most modern phones aren’t really supposed to be charged to the max, nor are they meant to run out of battery completely.
+        This is due to how the batteries are designed</string>
+
+
+    <string name="tipsH4">INSURE YOU DEVICE</string>
+    <string name="tip4">This may seem obvious, but a fairly easy way to make sure that your mobile phone remains in good
+        shape is to invest in comprehensive phone insurance.</string>
+
+
+    <string name="tipsH5">AVOID USING IN EXTREME TEMPS</string>
+    <string name="tip5">The health of your smartphone is very dependent on how well the battery operates. A sure-fire way of putting the battery under undue strain is to expose your smartphone to
+        extreme temperatures – both hot and cold.</string>
+
+    <string name="tipsH6">LOW POWER MODE</string>
+    <string name="tips6">Most, if not all, modern smartphones have some form of low-power mode, which reduced functionality in order
+        to preserve battery life and power. try to utilize this feature as much as possible</string>
 
 
 </resources>
