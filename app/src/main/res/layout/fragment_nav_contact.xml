@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#053357"
+    android:background="@drawable/radial"
     tools:context=".nav_contact">
 
 
@@ -82,16 +82,17 @@
         android:background="#5C84A7ED"
         android:src="@drawable/ic_baseline_contactless_24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bannerCont."
-         />
+        app:layout_constraintTop_toBottomOf="@+id/bannerCont." />
 
     <Button
         android:id="@+id/callButton"
         android:layout_width="122dp"
         android:layout_height="44dp"
         android:layout_marginStart="40dp"
-        android:background="#5C84A7ED"
+        android:background="#57283142"
         android:text="CALL"
+        android:textColor="#C6D0F4"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/callImg" />
 
@@ -100,8 +101,10 @@
         android:layout_width="122dp"
         android:layout_height="44dp"
         android:layout_marginStart="40dp"
-        android:background="#5C84A7ED"
+        android:background="#57283142"
         android:text="TEXT ME"
+        android:textColor="#C6D0F4"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/msgImg" />
 
@@ -110,8 +113,10 @@
         android:layout_width="122dp"
         android:layout_height="44dp"
         android:layout_marginStart="40dp"
-        android:background="#5C84A7ED"
+        android:background="#57283142"
         android:text="WEBSITE"
+        android:textColor="#C6D0F4"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/webImg"
         tools:ignore="MissingConstraints" />
@@ -121,8 +126,10 @@
         android:layout_width="122dp"
         android:layout_height="44dp"
         android:layout_marginEnd="40dp"
-        android:background="#5C84A7ED"
+        android:background="#57283142"
         android:text="EMAIL"
+        android:textColor="#C6D0F4"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailImg" />
 
@@ -131,8 +138,10 @@
         android:layout_width="122dp"
         android:layout_height="44dp"
         android:layout_marginEnd="40dp"
-        android:background="#5C84A7ED"
+        android:background="#57283142"
         android:text="LOCATION"
+        android:textColor="#C6D0F4"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/locImg" />
 
@@ -141,8 +150,10 @@
         android:layout_width="122dp"
         android:layout_height="44dp"
         android:layout_marginEnd="40dp"
-        android:background="#5C84A7ED"
+        android:background="#57283142"
         android:text="Facebook"
+        android:textColor="#C6D0F4"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView11" />
 

@@ -1,5 +1,5 @@
 package com.example.androidproject;
 
-public class recycleDisplayFragment{
+public class recycleDisplay {
 
 }
