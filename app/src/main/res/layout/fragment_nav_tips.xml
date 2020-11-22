@@ -4,19 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/radial"
+    android:fadingEdge="horizontal"
     android:orientation="vertical"
     tools:context=".nav_tips"
-    android:background="@drawable/radial"
     tools:ignore="ExtraText">
 
     <!-- TODO: Update blank fragment layout -->
     <ListView
         android:id="@+id/DataTypeList"
+        style="@style/Widget.AppCompat.ListView.DropDown"
         android:layout_width="match_parent"
         android:layout_height="373dp"
-        android:background="#4FFFFFFF"
-        android:cacheColorHint="#FFFFFF"
-        android:textAlignment="center"/>
+        android:alwaysDrawnWithCache="true"
+        android:animateLayoutChanges="true"
+        android:background="#19FFFFFF"
+        android:clickable="true"
+        android:textAlignment="center" />
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/DataTypeDescription"
@@ -28,9 +32,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="25dp"
-            android:text="TextView"
-            android:textAlignment="center"
-            android:textColor="#FFFFFF"
+            android:text="@string/Tips"
+            android:textAlignment="viewStart"
+            android:textColor="#BBCCF6"
             android:textSize="20sp"
             android:textStyle="bold" />
     </androidx.core.widget.NestedScrollView>

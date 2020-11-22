@@ -83,15 +83,15 @@ public class nav_process extends Fragment {
         public ViewPagerFragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return ViewPagerFragment.newInstance("first","first desc","timeline 1",R.drawable.ic_baseline_contact_phone_24);
+                    return ViewPagerFragment.newInstance("BASIC TROUBLESHOOTING","We Will Run Basic Scans for troubleshooting your devices for viruses or any sort of software issue or we can schedule an appointment on remote desktop software\n\n\n- Run Basic Scan\n- Scan for software issues. \n- Remote Desktop Assistance","30 Mins - 1 Hour",R.drawable.ic_baseline_contact_phone_24);
                 case 1:
-                    return ViewPagerFragment.newInstance("second","second desc","timeline 2",R.drawable.ic_baseline_contactless_24);
+                    return ViewPagerFragment.newInstance("DROP OFF ITEM","Bring your device to TECH GENICS (without any case,carrying case, etc.)\n\n\n- Please keep your data backed up\n- No Re-installation of software's\n  without written permission.\n- NOTE - WE ARE NOT RESPONSIBLE \n  FOR ANY DATA LOSS","30 Mins - Appointment",R.drawable.ic_baseline_contactless_24);
                 case 2:
-                    return ViewPagerFragment.newInstance("third","third desc","timeline 3",R.drawable.ic_baseline_mobile_friendly_24);
+                    return ViewPagerFragment.newInstance("CREATE A SERVICE TICKET","Our Tech expert will assist you with checking the computer and present virtual ticket to you including a description of the issue as well as contact information\n\n- Device analysis\n- IT Ticket Generation with brief \n  description of issue\n- Get ticket in printed form","30 Mins - device analysis",R.drawable.ic_baseline_mobile_friendly_24);
                 case 3:
-                    return ViewPagerFragment.newInstance("forth","forth desc","timeline 4",R.drawable.ic_baseline_sync_problem_24);
+                    return ViewPagerFragment.newInstance("PICK UP YOUR ITEM","After the device's issues are resolved to the best of our abilities,you will receive a call or email for pickup.You may pick your item up at any time we are open.\n\n- Device repaired to our ability\n- Wait for call from our Rep\n- Pick up your device","3 - 5 Business Days",R.drawable.ic_baseline_sync_problem_24);
                 case 4:
-                    return ViewPagerFragment.newInstance("fifth","fifth desc","timeline 5",R.drawable.ic_baseline_open_in_browser_24);
+                    return ViewPagerFragment.newInstance("RESOLVE CONTINUED ISSUES","If you notice any new or unresolved issues with your device,\n\n\n- Please reach out to us on -\n  (555)666-7777 or \n\n\n- Email us - techgenics@repair.ca","Work hours (10 AM - 6 PM)",R.drawable.ic_baseline_open_in_browser_24);
                 default:
                     return ViewPagerFragment.newInstance("default","none","none",R.drawable.side_nav_bar);
             }

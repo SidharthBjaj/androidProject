@@ -87,25 +87,26 @@ public class nav_tips extends Fragment {
 
 
         ArrayList<ListViewItem> dataTypeItemArrayList = new ArrayList<>();
-        dataTypeItemArrayList.add(new ListViewItem("UNINSTALL OLD APPLICATION","The best thing to do in order to keep your phone healthy is to go through\n" +
+        dataTypeItemArrayList.add(new ListViewItem("UNINSTALL OLD APPLICATION","The best thing to do in order to keep your phone healthy is to go through" +
                 "        your applications and delete those that you no longer use."));
-        dataTypeItemArrayList.add(new ListViewItem("KEEP YOUR SOFTWARE UPDATED","Regardless of whether you run iOS or Android, it’s vitally important for your phone’s health\n" +
-                "        that you keep the software up-to-date.\n" +
+        dataTypeItemArrayList.add(new ListViewItem("KEEP YOUR SOFTWARE UPDATED","Regardless of whether you run iOS or Android, it’s vitally important for your phone’s health" +
+                "        that you keep the software up-to-date." +
                 "        These usually have bug fixes and updates which fix issues on the device"));
 
-        dataTypeItemArrayList.add(new ListViewItem("AVOID OVER CHARGING","Most modern phones aren’t really supposed to be charged to the max, nor are they meant to run out of battery completely.\n" +
+        dataTypeItemArrayList.add(new ListViewItem("AVOID OVER CHARGING","Most modern phones aren’t really supposed to be charged to the max, nor are they meant to run out of battery completely." +
                 "        This is due to how the batteries are designed"));
 
-        dataTypeItemArrayList.add(new ListViewItem("INSURE YOU DEVICE","This may seem obvious, but a fairly easy way to make sure that your mobile phone remains in good\n" +
+        dataTypeItemArrayList.add(new ListViewItem("INSURE YOU DEVICE","This may seem obvious, but a fairly easy way to make sure that your mobile phone remains in good" +
                 "        shape is to invest in comprehensive phone insurance."));
 
-        dataTypeItemArrayList.add(new ListViewItem("AVOID USING IN EXTREME TEMPS","The health of your smartphone is very dependent on how well the battery operates. A sure-fire way of putting the battery under undue strain is to expose your smartphone to\n" +
+        dataTypeItemArrayList.add(new ListViewItem("AVOID USING IN EXTREME TEMPS","The health of your smartphone is very dependent on how well the battery operates. A sure-fire way of putting the battery under undue strain is to expose your smartphone to" +
                 "        extreme temperatures – both hot and cold."));
 
-        dataTypeItemArrayList.add(new ListViewItem("LOW POWER MODE","Most, if not all, modern smartphones have some form of low-power mode, which reduced functionality in order\n" +
+        dataTypeItemArrayList.add(new ListViewItem("LOW POWER MODE","Most, if not all, modern smartphones have some form of low-power mode, which reduced functionality in order" +
                 "        to preserve battery life and power. try to utilize this feature as much as possible"));
 
         ArrayAdapter arrayAdapter = new ArrayAdapter(getContext(),android.R.layout.simple_list_item_1,dataTypeItemArrayList);
+        
         listView.setAdapter(arrayAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -125,6 +126,7 @@ public class nav_tips extends Fragment {
 //            description.setTextSize(Float.parseFloat("28sp"));
 //            dataTypeItemArrayList.toString().toUpperCase();
 //        }
+
         return view;
     }
 
