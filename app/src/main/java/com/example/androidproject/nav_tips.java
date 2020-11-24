@@ -39,7 +39,7 @@ public class nav_tips extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private int mParam3;
+
 
     public nav_tips() {
         // Required empty public constructor
@@ -51,16 +51,15 @@ public class nav_tips extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @param param3 Parameter 3.
      * @return A new instance of fragment nav_tips.
      */
     // TODO: Rename and change types and number of parameters
-    public static nav_tips newInstance(String param1, String param2,int param3) {
+    public static nav_tips newInstance(String param1, String param2) {
         nav_tips fragment = new nav_tips();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
-        args.putInt(ARG_PARAM3, param3);
+
         fragment.setArguments(args);
         return fragment;
     }
@@ -71,7 +70,6 @@ public class nav_tips extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
-            mParam3 = getArguments().getInt(ARG_PARAM3);
         }
     }
 
@@ -107,7 +105,7 @@ public class nav_tips extends Fragment {
 
         ArrayAdapter arrayAdapter = new ArrayAdapter(getContext(),android.R.layout.simple_list_item_1,dataTypeItemArrayList);
         
-        listView.setAdapter(arrayAdapter);
+        listView.setAdapter(new CustomListViewAdapter(getContext(),dataTypeItemArrayList));
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -128,6 +126,23 @@ public class nav_tips extends Fragment {
 //        }
 
         return view;
+    }
+    public class CustomListViewAdapter extends ArrayAdapter<ListViewItem>{
+
+        public CustomListViewAdapter(@NonNull Context context, ArrayList<ListViewItem> items) {
+            super(context, 0,items);
+        }
+        @NonNull
+        @Override
+        public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+            if (convertView == null){
+                convertView = LayoutInflater.from(getContext()).inflate(R.layout.listview_item,parent,false);
+                TextView name = convertView.findViewById(R.id.name);
+                name.setText(getItem(position).getName());
+            }
+
+            return convertView;
+        }
     }
 
 

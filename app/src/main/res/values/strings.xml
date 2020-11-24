@@ -59,7 +59,16 @@
         to preserve battery life and power. try to utilize this feature as much as possible</string>
 
 
-    <string name="review">|Sid| :- \nThe staff at this place is amazing I called a few places and settled on the Tech Genics.\n\n|Mac| :-\nHighly Recommended for tech repair</string>
+    <string name="review">|Sid|  \n\"The staff at this place is amazing I \n called   few places and settled on the Tech \n Genics.\"\n\n|Mac| \n\"Trustworthy stop for tech repairs\"</string>
     <string name="Tips">Click on heading for more info</string>
+
+    <string name="callbackH">REQUEST A CALLBACK</string>
+    <string name="uremail">EMAIL</string>
+    <string name="urphone">PHONE NO.</string>
+    <string name="reasonForcall">BRIEF REASON</string>
+    <string name="date">DATE</string>
+    <string name="time">TIME</string>
+    <string name="device">DEVICE</string>
+    <string name="name">NAME</string>
 
 </resources>
