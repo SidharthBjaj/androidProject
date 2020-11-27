@@ -115,16 +115,7 @@ public class nav_tips extends Fragment {
         });
 
 
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
-
-//        if (sharedPreferences.getBoolean("size", Boolean.parseBoolean("22sp"))) {
-//            description.setTextSize(22);
-//        }
-//        if (sharedPreferences.getBoolean("size", Boolean.parseBoolean("20sp"))) {
-//            description.setTextSize(Float.parseFloat("28sp"));
-//            dataTypeItemArrayList.toString().toUpperCase();
-//        }
-
+  
         return view;
     }
     public class CustomListViewAdapter extends ArrayAdapter<ListViewItem>{
