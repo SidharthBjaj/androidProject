@@ -15,7 +15,7 @@
         android:text="@string/callbackH"
         android:textAlignment="center"
         android:textColor="#EAEAEA"
-        android:textSize="20sp"
+        android:textSize="@dimen/text20"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,87 +24,92 @@
     <TextView
         android:id="@+id/email"
         android:layout_width="158dp"
-        android:layout_height="40sp"
+        android:layout_height="44sp"
         android:layout_marginTop="24dp"
         android:text="@string/uremail"
         android:textColor="#F6F5F5"
-        android:textSize="20sp"
+        android:textSize="@dimen/text20"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hookH" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="158dp"
-        android:layout_height="40sp"
+        android:layout_height="44sp"
         android:layout_marginTop="16dp"
         android:text="@string/urphone"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="@dimen/text20"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <EditText
         android:id="@+id/emailEdit"
-        android:layout_width="189dp"
-        android:layout_height="40sp"
+        android:layout_width="183dp"
+        android:layout_height="44dp"
         android:layout_marginTop="24dp"
         android:autofillHints="\@gmail.com"
         android:hint="aaa@gmail.com"
         android:textColor="#FFFFFF"
-        android:textColorHighlight="#F4EFEF"
-        android:textColorHint="#F6F1F1"
+        android:textColorHighlight="#FBFBFB"
+        android:textColorHint="#978D8D"
+        android:textSize="@dimen/text20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hookH" />
 
     <EditText
         android:id="@+id/phoneEdit"
         android:layout_width="189dp"
-        android:layout_height="40sp"
+        android:layout_height="44sp"
         android:layout_marginTop="16dp"
         android:autofillHints="\@gmail.com"
         android:hint="9999999999"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#F4EFEF"
-        android:textColorHint="#F6F1F1"
+        android:textColorHint="#8E8787"
+        android:textSize="@dimen/text20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailEdit" />
 
     <EditText
         android:id="@+id/timeEdit"
         android:layout_width="189dp"
-        android:layout_height="40dp"
+        android:layout_height="44sp"
         android:layout_marginTop="16dp"
         android:autofillHints="\@gmail.com"
         android:hint="12 pm"
         android:textColor="#FFFFFF"
-        android:textColorHint="#F6F1F1"
         android:textColorHighlight="#F4EFEF"
+        android:textColorHint="#8E8787"
+        android:textSize="@dimen/text20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phoneEdit" />
 
     <EditText
         android:id="@+id/deviceEdit"
         android:layout_width="189dp"
-        android:layout_height="40dp"
+        android:layout_height="44sp"
         android:layout_marginTop="16dp"
         android:autofillHints="\@gmail.com"
         android:hint="iphone"
         android:textColor="#FFFFFF"
-        android:textColorHint="#F6F1F1"
         android:textColorHighlight="#F4EFEF"
+        android:textColorHint="#8E8787"
+        android:textSize="@dimen/text20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/timeEdit" />
 
     <EditText
         android:id="@+id/nameEdit"
         android:layout_width="189dp"
-        android:layout_height="40dp"
+        android:layout_height="44sp"
         android:layout_marginTop="16dp"
         android:autofillHints="\@gmail.com"
         android:hint="Sam"
         android:textColor="#FFFFFF"
-        android:textColorHint="#F6F1F1"
         android:textColorHighlight="#F4EFEF"
+        android:textColorHint="#8E8787"
+        android:textSize="@dimen/text20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/deviceEdit" />
 
@@ -116,10 +121,11 @@
         android:layout_marginTop="384dp"
         android:layout_marginEnd="8dp"
         android:autofillHints="\@gmail.com"
-        android:hint="                    breif info about concerns"
+        android:hint="                   Info about concerns"
         android:textColor="#FFFFFF"
-        android:textColorHint="#F6F1F1"
         android:textColorHighlight="#F4EFEF"
+        android:textColorHint="#8E8787"
+        android:textSize="@dimen/text20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hookH" />
@@ -132,7 +138,7 @@
         android:text="@string/reasonForcall"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="@dimen/text20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -141,33 +147,33 @@
     <TextView
         android:id="@+id/Time"
         android:layout_width="156dp"
-        android:layout_height="40dp"
+        android:layout_height="44sp"
         android:layout_marginTop="16dp"
         android:text="@string/time"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="@dimen/text20"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
         android:id="@+id/time2"
         android:layout_width="156dp"
-        android:layout_height="40dp"
+        android:layout_height="44sp"
         android:layout_marginTop="16dp"
         android:text="@string/device"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="@dimen/text20"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Time" />
 
     <TextView
         android:id="@+id/time3"
         android:layout_width="156dp"
-        android:layout_height="40dp"
+        android:layout_height="44sp"
         android:layout_marginTop="16dp"
         android:text="@string/name"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="@dimen/text20"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/time2" />
 
@@ -179,7 +185,7 @@
         android:background="#3198A9E8"
         android:text="Initiate Callback"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="@dimen/text20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/infoEdit" />

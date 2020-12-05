@@ -80,7 +80,7 @@
         android:layout_marginTop="340dp"
         android:layout_marginEnd="40dp"
         android:background="#5C84A7ED"
-        android:src="@drawable/ic_baseline_contactless_24"
+        android:src="@drawable/ic_baseline_supervisor_account_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bannerCont." />
 
@@ -92,7 +92,7 @@
         android:background="#57283142"
         android:text="CALL"
         android:textColor="#C6D0F4"
-        android:textSize="20sp"
+        android:textSize="@dimen/text20"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/callImg" />
 
@@ -104,7 +104,7 @@
         android:background="#57283142"
         android:text="TEXT ME"
         android:textColor="#C6D0F4"
-        android:textSize="20sp"
+        android:textSize="@dimen/text20"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/msgImg" />
 
@@ -116,7 +116,7 @@
         android:background="#57283142"
         android:text="WEBSITE"
         android:textColor="#C6D0F4"
-        android:textSize="20sp"
+        android:textSize="@dimen/text20"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/webImg"
         tools:ignore="MissingConstraints" />
@@ -129,7 +129,7 @@
         android:background="#57283142"
         android:text="EMAIL"
         android:textColor="#C6D0F4"
-        android:textSize="20sp"
+        android:textSize="@dimen/text20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailImg" />
 
@@ -141,7 +141,7 @@
         android:background="#57283142"
         android:text="LOCATION"
         android:textColor="#C6D0F4"
-        android:textSize="20sp"
+        android:textSize="@dimen/text20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/locImg" />
 
@@ -153,7 +153,7 @@
         android:background="#57283142"
         android:text="Facebook"
         android:textColor="#C6D0F4"
-        android:textSize="20sp"
+        android:textSize="@dimen/text20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView11" />
 

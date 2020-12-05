@@ -70,5 +70,9 @@
     <string name="time">TIME</string>
     <string name="device">DEVICE</string>
     <string name="name">NAME</string>
+    <string name="refresh">REFRESH</string>
+    <string name="qoute">Tech solutions at one stop</string>
+    <string name="nameApp2">TECH GENICS</string>
+
 
 </resources>

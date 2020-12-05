@@ -12,7 +12,7 @@
     <fragment
         android:id="@+id/nav_contact"
         android:name="com.example.androidproject.nav_contact"
-        android:label="fragment_nav_contact"
+        android:label="CONTACT US"
         tools:layout="@layout/fragment_nav_contact" />
     <fragment
         android:id="@+id/nav_hook"

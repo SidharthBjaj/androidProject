@@ -14,7 +14,7 @@
         android:fontFamily="serif"
         android:text="TextView"
         android:textColor="#FBFBFB"
-        android:textSize="20sp" />
+        android:textSize="@dimen/text20" />
 
     <TextView
         android:id="@+id/itemDescription"
@@ -24,6 +24,6 @@
         android:text="TextView"
         android:textAlignment="viewStart"
         android:textColor="#FBFBFB"
-        android:textSize="20sp" />
+        android:textSize="@dimen/text20" />
 
 </LinearLayout>

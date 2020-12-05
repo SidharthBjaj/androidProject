@@ -78,14 +78,11 @@ public class nav_contact extends Fragment {
         emailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String[]emailAddress={"sb124@myscc.ca"};
-                String[]ccEmailAddress={"techSupport@tgenics.ca"};
-
-                Intent intent = new Intent(Intent.ACTION_SEND);
+                String[]emailAddress={"techgenics@repair.ca"};
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
                 intent.setData(Uri.parse("mailto:"));
                 intent.putExtra(Intent.EXTRA_EMAIL,emailAddress);
-                intent.putExtra(Intent.EXTRA_CC,ccEmailAddress);
-                intent.putExtra(Intent.EXTRA_TEXT, "Some of the problems I am facing with my device are :- ");
+                intent.putExtra(Intent.EXTRA_TEXT,"I am having issue with :- ");
                 startActivity(intent);
             }
         });

@@ -73,6 +73,12 @@ public class creditsFragment extends Fragment {
         terms.add(new credit("IMAGE WELCOME 2","Image by 3D Animation Production Company from Pixabay"));
         terms.add(new credit("IMAGE WELCOME 3","Photo by Bram Van Oost on Unsplash"));
         terms.add(new credit("IMAGE WELCOME 4","Image by Bruno /Germany from Pixabay"));
+        terms.add(new credit("STEP 1 TROUBLE","Photo by Simon Abrams on Unsplash"));
+        terms.add(new credit("STEP 2 ANALYSIS","Photo by John Schnobrich on Unsplash"));
+        terms.add(new credit("STEP 3 TICKET","Photo by Tim van der Kuip on Unsplash"));
+        terms.add(new credit("STEP 4 REPAIR","Photo by Nikolai Chernichenko on Unsplash"));
+        terms.add(new credit("STEP 5 SERVICE","Photo by Annie Spratt on Unsplash"));
+        terms.add(new credit("SPIRAL CREDITS","Image by Pixel_perfect from Pixabay"));
 
         //layout manager
 

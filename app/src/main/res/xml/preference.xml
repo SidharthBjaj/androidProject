@@ -19,7 +19,6 @@
         android:entries="@array/font_style"
         android:entryValues="@array/font_sizes"/>
 
-
     <PreferenceCategory
         android:title="Number of tips" />
     <ListPreference android:title="Number of Tips"
@@ -28,15 +27,5 @@
         android:defaultValue="20"
         android:entries="@array/number_of_tips"
         android:entryValues="@array/number_of_tips"/>
-
-
-    <PreferenceCategory
-        android:title="Dark Theme" />
-    <SwitchPreference
-        android:defaultValue="true"
-        android:key="Theme"
-        android:summary="switch on for dark theme"
-        android:title="Settings option" />
-
 
 </PreferenceScreen>

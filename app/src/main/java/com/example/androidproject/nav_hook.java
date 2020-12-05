@@ -80,7 +80,6 @@ public class nav_hook extends Fragment {
                 Intent intent = new Intent(Intent.ACTION_SENDTO);
                 intent.setData(Uri.parse("mailto:"));
                 intent.putExtra(Intent.EXTRA_EMAIL,emailAddress);
-//                intent.putExtra(Intent.EXTRA_SUBJECT,"I would like to request for ");
                 intent.putExtra(Intent.EXTRA_TEXT,"Hey there, It will be really helpful if you can call me at  - "+phonefcb+" \naround - "+timefcb+"" +
                         "\n My device "+devicefcb+" is facing some issues like :- "+infofcb+".\n Just in case if this is minor issue, " +
                         "you can also send me an email at "+emailfcb+ "\n Thank You \n"+namefcb);

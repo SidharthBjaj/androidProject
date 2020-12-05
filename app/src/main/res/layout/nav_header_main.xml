@@ -24,12 +24,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="TECH GENICS"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        android:text="@string/nameApp2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Some qoute" />
+        android:text="@string/qoute"
+        android:textStyle="bold" />
 </LinearLayout>
