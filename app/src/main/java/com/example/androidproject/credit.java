@@ -3,12 +3,12 @@ package com.example.androidproject;
 public class credit {
     private  String name;
     private String defination;
+    private int image;
 
-
-    public credit(String name, String defination) {
+    public credit(String name, String defination, int image) {
         this.name = name;
         this.defination = defination;
-
+        this.image = image;
     }
 
     public String getName() {
@@ -27,9 +27,12 @@ public class credit {
         this.defination = defination;
     }
 
-    @Override
-    public String toString() {
-        return this.name;
+    public int getImage() {
+        return image;
+    }
+
+    public void setImage(int image) {
+        this.image = image;
     }
 }
 

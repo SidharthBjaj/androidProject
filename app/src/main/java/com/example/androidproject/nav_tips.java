@@ -18,10 +18,12 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.Objects;
 import java.util.TreeMap;
@@ -83,8 +85,9 @@ public class nav_tips extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_nav_tips, container, false);
 
+        View view = inflater.inflate(R.layout.fragment_nav_tips, container, false);
+//        view.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.La));
 
         final ListView listView = view.findViewById(R.id.DataTypeList);
         description = view.findViewById(R.id.item_description);
@@ -124,6 +127,7 @@ public class nav_tips extends Fragment {
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
 
         int textValue = Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("size", "20")));
+        String textStyle = (sharedPreferences.getString("style", "Cursive"));
 
         if (textValue == Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("size", "20")))) {
             description.setTextSize(Float.parseFloat(String.valueOf(textValue)));
@@ -138,6 +142,17 @@ public class nav_tips extends Fragment {
             description.setTextSize(Float.parseFloat(String.valueOf(textValue)));
         description.refreshDrawableState();
 
+
+        if (textStyle.equals(sharedPreferences.getString("style", "Cursive"))) {
+            Typeface type = Typeface.create("cursive", Typeface.NORMAL);
+            description.setTypeface(type);
+        }else if (textStyle.equals(sharedPreferences.getString("style", "Sans"))) {
+            Typeface type2 = Typeface.create("sans", Typeface.NORMAL);
+            description.setTypeface(type2);
+        }else if (textStyle.equals(sharedPreferences.getString("style", "Mono"))) {
+            Typeface type3 = Typeface.create("Monospace", Typeface.NORMAL);
+            description.setTypeface(type3);
+        }
         return view;
     }
 

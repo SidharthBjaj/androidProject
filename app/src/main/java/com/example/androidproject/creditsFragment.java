@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -24,10 +23,13 @@ public class creditsFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private static final String ARG_PARAM3 = "param3";
+
 
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private int mParam3;
 
     public creditsFragment() {
         // Required empty public constructor
@@ -42,11 +44,12 @@ public class creditsFragment extends Fragment {
      * @return A new instance of fragment creditsFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static creditsFragment newInstance(String param1, String param2) {
+    public static creditsFragment newInstance(String param1, String param2,int param3) {
         creditsFragment fragment = new creditsFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
+        args.putInt(ARG_PARAM3, param3);
         fragment.setArguments(args);
         return fragment;
     }
@@ -57,6 +60,7 @@ public class creditsFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+            mParam3 = getArguments().getInt(ARG_PARAM3);
         }
     }
 
@@ -68,17 +72,18 @@ public class creditsFragment extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.recycle);
 
         ArrayList<credit> terms = new ArrayList<>();
-        terms.add(new credit("BANNER", "Photo by Joel Rohland on Unsplash - banner"));
-        terms.add(new credit("IMAGE WELCOME 1","Photo by Adam Birkett on Unsplash"));
-        terms.add(new credit("IMAGE WELCOME 2","Image by 3D Animation Production Company from Pixabay"));
-        terms.add(new credit("IMAGE WELCOME 3","Photo by Bram Van Oost on Unsplash"));
-        terms.add(new credit("IMAGE WELCOME 4","Image by Bruno /Germany from Pixabay"));
-        terms.add(new credit("STEP 1 TROUBLE","Photo by Simon Abrams on Unsplash"));
-        terms.add(new credit("STEP 2 ANALYSIS","Photo by John Schnobrich on Unsplash"));
-        terms.add(new credit("STEP 3 TICKET","Photo by Tim van der Kuip on Unsplash"));
-        terms.add(new credit("STEP 4 REPAIR","Photo by Nikolai Chernichenko on Unsplash"));
-        terms.add(new credit("STEP 5 SERVICE","Photo by Annie Spratt on Unsplash"));
-        terms.add(new credit("SPIRAL CREDITS","Image by Pixel_perfect from Pixabay"));
+
+        terms.add(new credit("BANNER", "Photo by Joel Rohland on Unsplash - banner", R.drawable.banner));
+        terms.add(new credit("IMAGE WELCOME 1","Photo by Adam Birkett on Unsplash", R.drawable.first));
+        terms.add(new credit("IMAGE WELCOME 2","Image by 3D Animation Production Company from Pixabay", R.drawable.second));
+        terms.add(new credit("IMAGE WELCOME 3","Photo by Bram Van Oost on Unsplash", R.drawable.third));
+        terms.add(new credit("IMAGE WELCOME 4","Image by Bruno /Germany from Pixabay", R.drawable.forth));
+        terms.add(new credit("STEP 1 TROUBLE","Photo by Simon Abrams on Unsplash", R.drawable.trouble));
+        terms.add(new credit("STEP 2 ANALYSIS","Photo by John Schnobrich on Unsplash", R.drawable.analysis));
+        terms.add(new credit("STEP 3 TICKET","Photo by Tim van der Kuip on Unsplash", R.drawable.last));
+        terms.add(new credit("STEP 4 REPAIR","Photo by Nikolai Chernichenko on Unsplash", R.drawable.service));
+        terms.add(new credit("STEP 5 SERVICE","Photo by Annie Spratt on Unsplash", R.drawable.pickup));
+        terms.add(new credit("SPIRAL CREDITS","Image by Pixel_perfect from Pixabay", R.drawable.spiral));
 
         //layout manager
 

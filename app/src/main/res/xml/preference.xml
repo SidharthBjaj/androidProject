@@ -15,17 +15,9 @@
     <ListPreference android:title="Text Style"
         android:summary="Please select the font style"
         android:key="style"
-        android:defaultValue="cursive"
+        android:defaultValue="Sans-serif"
         android:entries="@array/font_style"
         android:entryValues="@array/font_sizes"/>
 
-    <PreferenceCategory
-        android:title="Number of tips" />
-    <ListPreference android:title="Number of Tips"
-        android:summary="Please select the no of tips your prefer to view"
-        android:key="number"
-        android:defaultValue="20"
-        android:entries="@array/number_of_tips"
-        android:entryValues="@array/number_of_tips"/>
 
 </PreferenceScreen>

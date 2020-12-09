@@ -4,6 +4,7 @@ package com.example.androidproject;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -32,6 +33,7 @@ public class CustomRecyclerViewAdaptor extends RecyclerView.Adapter<CustomRecycl
         credit credit = credits.get(position);
         holder.name.setText(credit.getName());
         holder.description.setText(credit.getDefination());
+        holder.imageView.setImageResource(credit.getImage());
     }
 
     @Override
@@ -44,12 +46,15 @@ public class CustomRecyclerViewAdaptor extends RecyclerView.Adapter<CustomRecycl
     class CustomViewHolder extends RecyclerView.ViewHolder{
         protected TextView name;
         protected TextView description;
+        protected ImageView imageView;
 
 
         public CustomViewHolder(@NonNull View itemView) {
             super(itemView);
             this.name = itemView.findViewById(R.id.name);
             this.description = itemView.findViewById(R.id.itemDescription);
+            this.imageView = itemView.findViewById(R.id.recycleImage);
+
         }
     }
 }
