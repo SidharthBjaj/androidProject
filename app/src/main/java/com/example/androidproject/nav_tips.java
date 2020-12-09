@@ -138,18 +138,30 @@ public class nav_tips extends Fragment {
             description.setTextSize(Float.parseFloat(String.valueOf(textValue)));
         description.refreshDrawableState();
 
-//        Button refreshButton = view.findViewById(R.id.refresh_button);
-//        refreshButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(new nav_tips);
-//                description.refreshDrawableState();
-//                startActivity(i);
-//            }
-//        });
-
         return view;
     }
+
+    @Override
+    public void onResume() {
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+
+        int textValue = Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("size", "20")));
+
+        if (textValue == Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("size", "20")))) {
+            description.setTextSize(Float.parseFloat(String.valueOf(textValue)));
+            description.refreshDrawableState();
+        } else if (textValue == Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("size", "22")))) {
+            description.setTextSize(Float.parseFloat(String.valueOf(textValue)));
+            description.refreshDrawableState();
+        } else if (textValue == Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("size", "24")))) {
+            description.setTextSize(Float.parseFloat(String.valueOf(textValue)));
+            description.refreshDrawableState();
+        }else if (textValue == Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("size", "26"))))
+            description.setTextSize(Float.parseFloat(String.valueOf(textValue)));
+        description.refreshDrawableState();
+        super.onResume();
+    }
+
     public class CustomListViewAdapter extends ArrayAdapter<ListViewItem>{
 
         public CustomListViewAdapter(@NonNull Context context, ArrayList<ListViewItem> items) {
