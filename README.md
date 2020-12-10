@@ -1,20 +1,20 @@
 # androidProject
 
-Tech Genics
+## Tech Genics
 
-Overview
+## Overview
 
 The original concept of the application is to provide resourceful mobile application to local 
 business that deals with repairing of mobiles and laptops so that it makes their business more 
 vastly spread and with this mobile application it will enable his customer to directly connect 
 with him via various modes of communication like email, phone, messages, social media, etc.
 
-Prerequisites
+## Prerequisites
 
 - Android studio
 - Android emulator/android phone(with enabled developer option)
 
-Detailed Information
+## Detailed Information
 
 - I chose Tech repair company by name of Tech Genics that provides repairing services for laptops and cell phones.
 
@@ -48,8 +48,7 @@ Detailed Information
   <img src="https://user-images.githubusercontent.com/72910540/101816733-602ba580-3aef-11eb-836e-07088c4b8259.png" width="200" height="400">
   <img src="https://user-images.githubusercontent.com/72910540/101816739-615cd280-3aef-11eb-8485-4942dad7f7cb.png" width="200" height="400">
   
-  
-  Guide for Application
+ ## Guide for Application
   
 - User is presented with welcome page. It has (ask something) button if you would directly send message to tech support of company.
 
