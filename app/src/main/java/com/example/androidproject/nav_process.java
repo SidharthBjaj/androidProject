@@ -11,6 +11,8 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -64,6 +66,9 @@ public class nav_process extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_nav_process, container, false);
+
+        Animation animation = AnimationUtils.loadAnimation(getContext(),R.anim.roll);
+        view.startAnimation(animation);
         CustomViewPagerAdapter adapter = new CustomViewPagerAdapter(getChildFragmentManager());
         ViewPager viewPager = view.findViewById(R.id.accessContent);
         viewPager.setAdapter(adapter);

@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 
 /**
@@ -63,6 +65,8 @@ public class nav_welcome extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_nav_welcome, container, false);
+        Animation animation = AnimationUtils.loadAnimation(getContext(),R.anim.roll);
+        view.startAnimation(animation);
 
         Button textButton = view.findViewById(R.id.askButton2);
         textButton.setOnClickListener(new View.OnClickListener() {

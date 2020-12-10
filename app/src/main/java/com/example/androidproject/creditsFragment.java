@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 import java.util.ArrayList;
 
@@ -69,6 +71,8 @@ public class creditsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_credits, container, false);
+        Animation animation = AnimationUtils.loadAnimation(getContext(),R.anim.roll);
+        view.startAnimation(animation);
         RecyclerView recyclerView = view.findViewById(R.id.recycle);
 
         ArrayList<credit> terms = new ArrayList<>();

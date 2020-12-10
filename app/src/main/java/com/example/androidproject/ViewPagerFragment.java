@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -72,6 +74,8 @@ public class ViewPagerFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_view_pager, container, false);
+        Animation animation = AnimationUtils.loadAnimation(getContext(),R.anim.roll);
+        view.startAnimation(animation);
         if (mParam1 != null){
             TextView headPress = view.findViewById(R.id.headView);
             headPress.setText(mParam1);
