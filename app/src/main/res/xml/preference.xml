@@ -15,9 +15,9 @@
     <ListPreference android:title="Text Style"
         android:summary="Please select the font style"
         android:key="style"
-        android:defaultValue="Sans-serif"
+        android:defaultValue="1"
         android:entries="@array/font_style"
-        android:entryValues="@array/font_sizes"/>
+        android:entryValues="@array/font_style"/>
 
 
 </PreferenceScreen>

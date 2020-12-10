@@ -32,12 +32,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="25dp"
-            android:fontFamily="sans-serif"
+            android:fontFamily="casual"
             android:text="@string/Tips"
             android:textAlignment="viewStart"
             android:textColor="#BBCCF6"
-            android:textSize="@dimen/text20"
-            android:textStyle="bold" />
+            android:textSize="@dimen/text20" />
     </androidx.core.widget.NestedScrollView>
 
 

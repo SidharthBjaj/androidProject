@@ -127,35 +127,6 @@ public class nav_tips extends Fragment {
         });
 
         description.setTextSize(20);
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
-
-        int textValue = Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("size", "20")));
-        String textStyle = (sharedPreferences.getString("style", "Cursive"));
-
-        if (textValue == Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("size", "20")))) {
-            description.setTextSize(Float.parseFloat(String.valueOf(textValue)));
-            description.refreshDrawableState();
-        } else if (textValue == Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("size", "22")))) {
-            description.setTextSize(Float.parseFloat(String.valueOf(textValue)));
-            description.refreshDrawableState();
-        } else if (textValue == Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("size", "24")))) {
-            description.setTextSize(Float.parseFloat(String.valueOf(textValue)));
-            description.refreshDrawableState();
-        }else if (textValue == Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("size", "26"))))
-            description.setTextSize(Float.parseFloat(String.valueOf(textValue)));
-        description.refreshDrawableState();
-
-
-        if (textStyle.equals(sharedPreferences.getString("style", "Cursive"))) {
-            Typeface type = Typeface.create("serif", Typeface.NORMAL);
-            description.setTypeface(type);
-        }else if (textStyle.equals(sharedPreferences.getString("style", "Sans"))) {
-            Typeface type2 = Typeface.create("sans", Typeface.NORMAL);
-            description.setTypeface(type2);
-        }else if (textStyle.equals(sharedPreferences.getString("style", "Mono"))) {
-            Typeface type3 = Typeface.create("Monospace", Typeface.NORMAL);
-            description.setTypeface(type3);
-        }
         return view;
     }
 
@@ -164,6 +135,7 @@ public class nav_tips extends Fragment {
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
 
         int textValue = Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("size", "20")));
+        int textStyle = Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("style", "1")));
 
         if (textValue == Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("size", "20")))) {
             description.setTextSize(Float.parseFloat(String.valueOf(textValue)));
@@ -177,6 +149,19 @@ public class nav_tips extends Fragment {
         }else if (textValue == Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("size", "26"))))
             description.setTextSize(Float.parseFloat(String.valueOf(textValue)));
         description.refreshDrawableState();
+
+        if (textStyle == Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("style", "1")))) {
+            description.setTypeface(Typeface.defaultFromStyle(textStyle));
+
+        }
+        else if (textStyle == Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("style", "2")))) {
+            description.setTypeface(Typeface.defaultFromStyle(textStyle));
+
+        }
+        else if (textStyle == Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("style", "3")))) {
+            description.setTypeface(Typeface.defaultFromStyle(textStyle));
+        }
+
         super.onResume();
     }
 
