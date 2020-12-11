@@ -96,10 +96,13 @@ public class nav_contact extends Fragment {
         textButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_SENDTO);
-                intent.setData(Uri.parse("smsto:"));
-                intent.putExtra("sms body: ", "Some of my concerns regarding the device are :- ");
-                startActivity(intent);
+                {
+                    Uri uriUrl = Uri.parse("https://www.instagram.com/");
+                    Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+                    startActivity(launchBrowser);
+                }
+
+
             }
         });
 

@@ -74,5 +74,12 @@
     <string name="qoute">Tech solutions at one stop</string>
     <string name="nameApp2">TECH GENICS</string>
 
+    <string name="call">CALL</string>
+    <string name="email">EMAIL</string>
+    <string name="insta">INSTAGRAM</string>
+    <string name="web">WEBSITE</string>
+    <string name="loc">LOCATION</string>
+    <string name="face">FACEBOOK</string>
+
 
 </resources>

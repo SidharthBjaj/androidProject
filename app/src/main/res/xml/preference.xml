@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory
-        android:title="Font Size" />
+    <PreferenceCategory android:title="Font Size" />
 
-    <ListPreference android:title="Text Size"
-        android:summary="Please select the font size"
-        android:key="size"
-        android:defaultValue="20"
+    <ListPreference
+        android:defaultValue="true"
         android:entries="@array/font_sizes"
-        android:entryValues="@array/font_sizes"/>
+        android:entryValues="@array/font_sizes"
+        android:key="size"
+        android:summary="Please select the font size"
+        android:title="Text Size" />
 
-    <PreferenceCategory
-        android:title="Font Style" />
-    <ListPreference android:title="Text Style"
-        android:summary="Please select the font style"
-        android:key="style"
-        android:defaultValue="1"
+    <PreferenceCategory android:title="Font Style" />
+    <ListPreference
+        android:defaultValue="true"
         android:entries="@array/font_style"
-        android:entryValues="@array/font_style"/>
+        android:entryValues="@array/font_style"
+        android:key="style"
+        android:summary="Select 1 for Normal \nSelect 2 for Thin Text \nSelect 3 for Thick Italicised"
+        android:title="Text Style" />
 
 
 </PreferenceScreen>

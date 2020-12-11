@@ -135,7 +135,7 @@ public class nav_tips extends Fragment {
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
 
         int textValue = Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("size", "20")));
-        int textStyle = Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("style", "1")));
+
 
         if (textValue == Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("size", "20")))) {
             description.setTextSize(Float.parseFloat(String.valueOf(textValue)));
@@ -146,13 +146,15 @@ public class nav_tips extends Fragment {
         } else if (textValue == Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("size", "24")))) {
             description.setTextSize(Float.parseFloat(String.valueOf(textValue)));
             description.refreshDrawableState();
-        }else if (textValue == Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("size", "26"))))
+        } else if (textValue == Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("size", "26"))))
             description.setTextSize(Float.parseFloat(String.valueOf(textValue)));
         description.refreshDrawableState();
 
+        int textStyle = Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("style", "1")));
+
+
         if (textStyle == Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("style", "1")))) {
             description.setTypeface(Typeface.defaultFromStyle(textStyle));
-
         }
         else if (textStyle == Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("style", "2")))) {
             description.setTypeface(Typeface.defaultFromStyle(textStyle));
@@ -161,6 +163,7 @@ public class nav_tips extends Fragment {
         else if (textStyle == Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("style", "3")))) {
             description.setTypeface(Typeface.defaultFromStyle(textStyle));
         }
+
 
         super.onResume();
     }
